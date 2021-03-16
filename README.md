@@ -36,15 +36,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| Red-team-| Webserver| 10.0.0.5   | Linux            |
-| webserver|          |            |                  |
-| -1       |          |            |                  | 
-| Red-team-| Webserver| 10.0.0.6   | Linux            |
-| webserver|          |            |                  |  
-| -2       |          |            |                  |
-| ELK2     | Monitor  | 10.1.0.4   | Linux            |
-|          | traffic  |            |                  |         
-
+| Webserver 1 | Webserver| 10.0.0.5   | Linux          
+| Webserver 2| Webserver| 10.0.0.6   | Linux     
+| ELK2     | Monitor traffic | 10.1.0.4   | Linux            |        
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
@@ -59,9 +53,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes      | My public IP(floating)    |
+| Webserver 1| No     | 10.0.0.1                | |    
+| Webserver 2| No |10.0.0.1
+| ELK | Yes| My public IP(floating)                   |                      |
 
 ### Elk Configuration
 
